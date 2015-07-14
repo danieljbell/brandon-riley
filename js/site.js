@@ -4,6 +4,7 @@ $(document).ready( function() {
 	})
 	
 	$("header h1").fitText(1, { minFontSize: '12px', maxFontSize: '90px' });
+	$("nav a").fitText(1, { minFontSize: '12px', maxFontSize: '36px' });
 
 	var navOffset = $("nav").offset().top;
 
