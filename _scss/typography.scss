@@ -1,0 +1,88 @@
+// GLOBAL STYLES
+h1, h2, h6 {
+	font-family: 'TitilliumWeb-Bold';
+	text-transform: uppercase;
+}
+
+h6 {
+	text-align: center;
+}
+
+p {
+	padding-bottom: 1em;
+		&:last-child {
+			padding-bottom: 0;
+		}
+}
+
+a {
+	text-decoration: none;
+	color: $dark;
+}
+
+
+
+// HEADER SPECIFIC STYLES
+.overlay {
+	text-shadow: 3px 3px 5px rgba(0,0,0,.8);
+	h1 {
+		text-align: center;
+		font-size: 90px;
+		color: #fff;
+		@include bp(tab) {
+			font-size: 72px;
+		}
+		@include bp(phone) {
+			font-size: 36px;
+		}
+		@include bp(phone2) {
+			font-size: 28px;
+		}
+		
+		span {
+			display: inline-block;
+			padding: 1em 0.5em 0.8em;
+			border: 10px solid #fff;
+			box-shadow: 3px 3px 5px rgba(0,0,0,.8);
+		}
+	}
+	p {
+		text-align: center;
+		color: #fff;
+		padding-top: 1em;
+		word-spacing: 1em;
+		@include bp(phone) {
+			font-size: 16px;
+		}
+	}
+}
+
+
+
+// NAVIGATION SPECIFIC STYLES
+nav {
+	ul {
+		li {
+			&:nth-child(2) {
+				text-align: center;
+			}
+			&:last-child {
+				text-align: right;
+			}
+		}
+		a {
+			text-decoration: none;
+			color: $dark;
+			font-size: 36px;
+			line-height: 65px;
+			@include bp(phone) {
+				font-size: 24px;
+				line-height: 60px;
+			}
+			@include bp(phone2) {
+				font-size: 20px;
+				line-height: 48px;
+			}
+		}
+	}
+}

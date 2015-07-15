@@ -1,0 +1,60 @@
+$mainc: #ffe3e3;
+$dark: #333;
+
+@mixin bp($point) {
+  @if $point == phone2 {
+    @media (max-width: 320px) { @content; }
+  } 
+  @else if $point == phone {
+    @media (max-width: 640px) { @content; }
+  }
+  @else if $point == tab2 {
+    @media (max-width: 768px) { @content; }
+  }
+  @else if $point == tab {
+  	@media (max-width: 1024px) { @content; }
+  }
+}
+
+@mixin rowMachine($numPerRow, $margin) {
+  width: ((100% - (($numPerRow - 1) * $margin)) / $numPerRow);
+  &:nth-child(n) {
+    margin-bottom: $margin;
+    margin-right: $margin;
+  }
+  &:nth-child(#{$numPerRow}n) {
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+}
+
+@font-face {
+  font-family: 'TitilliumWeb-ExtraLight';
+  src: url('../font/TitilliumWeb-ExtraLight.ttf');
+}
+
+@font-face {
+  font-family: 'TitilliumWeb-Bold';
+  src: url('../font/TitilliumWeb-Bold.ttf');
+}
+
+body {
+  font-size: 18px;
+  line-height: 22px;
+  font-family: 'TitilliumWeb-ExtraLight';
+  color: $dark;
+}
+
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+.cf {
+    *zoom: 1;
+}
