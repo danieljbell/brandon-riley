@@ -53,6 +53,7 @@ a {
 		word-spacing: 1em;
 		@include bp(phone) {
 			font-size: 16px;
+			word-spacing: .2em;
 		}
 	}
 }
