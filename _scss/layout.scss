@@ -150,6 +150,7 @@ nav {
 			margin-bottom: 10px;
 			height: 35px;
 			font-size: 1em;
+			font-family: 'TitilliumWeb-ExtraLight', sans-serif;
 		}
 		.text {
 				width: 49.7%;
@@ -161,6 +162,7 @@ nav {
 			width: 100%;
 			max-width: 820px;
 			font-size: 1em;
+			font-family: 'TitilliumWeb-ExtraLight', sans-serif;
 		}
 		button {
 		  padding: .5em .75em;
@@ -170,6 +172,8 @@ nav {
 		  border: 2px solid $dark;
 		  font-size: .75em;
 		  margin-top: 5px;
+		  font-family: 'TitilliumWeb-Bold', sans-serif;
+		  text-transform: uppercase;
 		}
 	}
 }
