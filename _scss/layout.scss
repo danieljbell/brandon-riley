@@ -163,10 +163,13 @@ nav {
 			font-size: 1em;
 		}
 		button {
-			padding: 1em 2em;
-			border-radius: 10px;
-			background-color: #fff;
-			color: $dark;
+		  padding: .5em .75em;
+		  border-radius: 10px;
+		  background-color: transparent;
+		  color: $dark;
+		  border: 2px solid $dark;
+		  font-size: .75em;
+		  margin-top: 5px;
 		}
 	}
 }
