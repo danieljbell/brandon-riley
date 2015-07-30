@@ -37,7 +37,20 @@ uglify: {
       'js/site.min.js': ['js/libs/jquery.js', 'js/libs/fancybox.js', 'js/site.js']
     }
   }
-}
+},
+
+imagemin: {
+    dynamic: {
+      files: [{
+        expand: true,
+        cwd: 'img/',
+        src: ['**/*.{png,jpg,gif}'],
+        dest: 'img/dist'
+      }]
+    }
+  }
+
+
 
 
 });
@@ -46,6 +59,7 @@ uglify: {
     grunt.loadNpmTasks('grunt-autoprefixer');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-contrib-imagemin');
  
-    grunt.registerTask('default',['sass', 'autoprefixer', 'uglify', 'watch']);
+    grunt.registerTask('default',['sass', 'autoprefixer', 'uglify', 'imagemin', 'watch']);
 };
