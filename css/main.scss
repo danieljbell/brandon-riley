@@ -1,7 +1,4 @@
----
----
-
-@import "reset";
-@import 'config';
-@import 'layout';
-@import 'typography';
+@import '../scss/reset';
+@import '../scss/config';
+@import '../scss/layout';
+@import '../scss/typography';
