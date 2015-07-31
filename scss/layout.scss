@@ -103,8 +103,26 @@ nav {
 // ABOUT SPECIFIC STYLES
 .br {
 	width: 100%;
-	max-width: 360px;
-	float: right;
+	background: url('../img/dist/br.jpg') bottom right no-repeat;
+	background-size: 50%;
+	p {
+		width: 50%;
+		&:first-of-type {
+			width: 65%;
+			@include bp (phone) {
+				width: 100%;
+			}
+		}
+		@include bp(phone) {
+			width: 100%;
+		}
+		&:last-child {
+			padding-bottom: 15px;
+		}
+	}
+	@include bp(phone) {
+		background: #ccc;
+	}
 }
 
 
