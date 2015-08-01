@@ -28,20 +28,21 @@ $dark: #333;
   }
 }
 
-@font-face {
-  font-family: 'TitilliumWeb-ExtraLight';
-  src: url('../font/TitilliumWeb-ExtraLight.ttf');
-}
+// @font-face {
+//   font-family: 'TitilliumWeb-ExtraLight';
+//   src: url('../font/TitilliumWeb-ExtraLight.ttf');
+// }
 
-@font-face {
-  font-family: 'TitilliumWeb-Bold';
-  src: url('../font/TitilliumWeb-Bold.ttf');
-}
+// @font-face {
+//   font-family: 'TitilliumWeb-Bold';
+//   src: url('../font/TitilliumWeb-Bold.ttf');
+// }
 
 body {
   font-size: 18px;
   line-height: 22px;
-  font-family: 'TitilliumWeb-ExtraLight';
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: 200;
   color: $dark;
 }
 

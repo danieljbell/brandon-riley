@@ -40,15 +40,31 @@ uglify: {
 },
 
 imagemin: {
-    dynamic: {
-      files: [{
-        expand: true,
-        cwd: 'img/',
-        src: ['**/*.{png,jpg,gif}'],
-        dest: 'img/dist'
-      }]
+  dynamic: {
+    files: [{
+      expand: true,
+      cwd: 'img/',
+      src: ['**/*.{png,jpg,gif}'],
+      dest: 'img/dist'
+    }]
+  }
+},
+
+browserSync: {
+  dev: {
+    bsFiles: {
+      src : [
+          'css/*.css',
+          'index.html',
+          'js/*.js'
+      ]
+    },
+    options: {
+        watchTask: true,
+        server: './'
     }
   }
+}
 
 
 
@@ -60,6 +76,7 @@ imagemin: {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-imagemin');
+    grunt.loadNpmTasks('grunt-browser-sync');
  
-    grunt.registerTask('default',['sass', 'autoprefixer', 'uglify', 'imagemin', 'watch']);
+    grunt.registerTask('default',['sass', 'autoprefixer', 'uglify', 'imagemin', 'browserSync','watch']);
 };
